@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.AddProjectPage">
+    
+    <NavigationPage.TitleView>
+        <Label FontSize="Title" Margin="0,0,50,0" HorizontalOptions="Center"  Text="Создать проект" TextColor="White"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="50,0,50,0">
+            <StackLayout>
+                <Frame Margin="0,20,0,0" BackgroundColor="#DCDCDC">
+                    <Entry x:Name="LoginTxt" Margin="-10,-15,-10,-15" Placeholder="Имя проекта" TextColor="Black" Keyboard="Text"/>
+                </Frame>
+                <Frame Margin="0,10,0,0"  BackgroundColor="#DCDCDC">
+                    <Editor x:Name="Opis" Margin="-10,100,-10,-15" Placeholder="Описание" TextColor="Black"  Keyboard="Email"/>
+                </Frame>
+                <Frame Margin="0,20,0,0" BackgroundColor="#DCDCDC">
+                    <Entry x:Name="Phone" Margin="-10,-15,-10,-15" Placeholder="Телефон №1" TextColor="Black"  IsPassword="True"/>
+                </Frame>
+                <Frame Margin="0,20,0,0" BackgroundColor="#DCDCDC">
+                    <Entry x:Name="Email" Margin="-10,-15,-10,-15" Placeholder="E-mail" TextColor="Black" IsPassword="True"/>
+                </Frame>
+                <Frame Margin="0,20,0,0" BackgroundColor="#DCDCDC">
+                    <Entry x:Name="Adres" Margin="-10,-15,-10,-15" Placeholder="Адрес" TextColor="Black" IsPassword="True"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="0,80,0,0">
+                <Button Margin="15,0,0,0" x:Name="Otm" HorizontalOptions="Start" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="    Отмена    "/>
+                <Button Margin="0,-55,10,0" x:Name="Add"  HorizontalOptions="End" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="  Добавить  "/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

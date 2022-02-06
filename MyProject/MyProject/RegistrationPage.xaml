@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProject.RegistrationPage" Title="Регистрация">
+    <StackLayout Margin="50,0,50,0" >
+        <StackLayout>
+            <Frame Margin="0,50,0,0" BackgroundColor="#DCDCDC">
+                <Entry x:Name="LoginTxt" Margin="-10,-15,-10,-15" Placeholder="Логин" TextColor="Black" Keyboard="Text"/>
+            </Frame>
+            <Frame Margin="0,50,0,0"  BackgroundColor="#DCDCDC">
+                <Entry x:Name="EmailTxt" Margin="-10,-15,-10,-15" Placeholder="E-mail" TextColor="Black"  Keyboard="Email"/>
+            </Frame>
+            <Frame Margin="0,50,0,0" BackgroundColor="#DCDCDC">
+                <Entry x:Name="PasswordTxt" Margin="-10,-15,-10,-15" Placeholder="Пароль" TextColor="Black"  IsPassword="True"/>
+            </Frame>
+            <Frame Margin="0,50,0,0" BackgroundColor="#DCDCDC">
+                <Entry x:Name="PasswordCompleteTxt" Margin="-10,-15,-10,-15" Placeholder="Пароль" TextColor="Black" IsPassword="True"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout>
+            <Button Margin="0,70" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12"  Text="Зарегистрироваться"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
