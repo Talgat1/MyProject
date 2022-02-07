@@ -19,9 +19,10 @@ namespace MyProject
         {
             await Navigation.PushAsync(new RegistrationPage());
         }
-        private async void Vhod(object sender, EventArgs e)
+        async void Vhod(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProjectPage());
+            //await Navigation.PushAsync(new ProjectPage());
+            await App.GlobalNavigation.PushAsync(new ProjectPage(), true);
         }
     }
 }

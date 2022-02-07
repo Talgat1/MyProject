@@ -1,22 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyProject.MainPage" >
+             x:Class="MyProject.MainPage" 
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
 
-    <StackLayout Margin="10,20">
+    <StackLayout Margin="10,40">
         <Image x:Name="ImageMenu" Opacity="0.8" Source="image.png"/>
         <StackLayout>
-            <Frame Margin="15,40,15,0" BackgroundColor="#DCDCDC">
-                <Entry x:Name="LoginTextbox" Placeholder="Логин"  TextColor="Black"  Margin="-15,-15" Keyboard="Email"/>
-            </Frame>
-            <Frame Margin="15,50,15,0" BackgroundColor="#DCDCDC">
-                <Entry x:Name="PasswordTextBox" Placeholder="Пароль" TextColor="Black"  Margin="-15,-15" Keyboard="Chat"/>
-            </Frame>
-        </StackLayout>
-        <StackLayout Margin="0,60,0,0">
-            <Button Margin="15,0,0,0" x:Name="Registration" Clicked="Reg" HorizontalOptions="Start" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="Зарегистрироваться"/>
-            <Button Margin="0,-55,10,0" x:Name="Login" Clicked="Vhod" HorizontalOptions="End" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="          Войти          "/>
-        </StackLayout>
+            <Entry BackgroundColor="#DCDCDC" Placeholder="Логин" Margin="20,40,20,0"/>
+            <Entry BackgroundColor="#DCDCDC" Placeholder="Пароль"  Margin="20,40,20,20"/>
+            <Button Margin="20,60,0,0" x:Name="Registration" Clicked="Reg" HorizontalOptions="Start" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="11" Text="Зарегистрироваться"/>
+            <Button Margin="0,-40,30,0" x:Name="Login" Clicked="Vhod" HorizontalOptions="End" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="11" Text="   Войти   "/>
+        </StackLayout> 
+        
     </StackLayout>
 
 </ContentPage>

@@ -7,7 +7,12 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Проект" TextColor="White"/>
-            <Button HorizontalOptions="End"  Margin="0,0,0,0" Visual="Material" Text="&#xe145;" Clicked="Edit"/>
+            <Button HorizontalOptions="End" FontFamily="MaterialIconsFont"   Margin="0,0,0,0" Text="&#xe3c9;"  Clicked="Edit"/>
+            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe872;" FontSize="Title">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Edit"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>          
     </NavigationPage.TitleView>
     

@@ -2,12 +2,17 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyProject.ProjectPage">
+             x:Class="MyProject.ProjectPage"
+             NavigationPage.HasBackButton="False">
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="Проекты" TextColor="White"/>
-            <Button HorizontalOptions="End" Margin="0,0,0,0" Visual="Material" Text="&#xe145;" Clicked="Add" />
+            <Label FontSize="Title" HorizontalOptions="CenterAndExpand"  Text="Проекты" TextColor="White"/>
+            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe145;" FontSize="Title">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
 
