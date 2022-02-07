@@ -12,7 +12,6 @@
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
-        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>

@@ -25,9 +25,10 @@ namespace MyProject
             Navigation.PushAsync(new InformationProjectPage());
         }
 
-        private async void Add(object sender, EventArgs e)
+        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddProjectPage());
+            //await Navigation.PushAsync(new AddProjectPage());
+            await App.GlobalNavigation.PushAsync(new AddProjectPage(), true);
         }
     }
 }
