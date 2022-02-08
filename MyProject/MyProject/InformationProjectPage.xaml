@@ -2,13 +2,14 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
             xmlns:local="clr-namespace:MyProject"
-             x:Class="MyProject.InformationProjectPage">
+             x:Class="MyProject.InformationProjectPage"
+            Visual="Material">
     
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Проект" TextColor="White"/>
-            <Button HorizontalOptions="End" FontFamily="MaterialIconsFont"   Margin="0,0,0,0" Text="&#xe3c9;"  Clicked="Edit"/>
-            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe872;" FontSize="Title">
+
+            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe87e;" FontSize="Title">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Edit"/>
                 </Label.GestureRecognizers>
