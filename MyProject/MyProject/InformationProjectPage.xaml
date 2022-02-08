@@ -33,19 +33,10 @@
     <local:ImagePage Title="Картинки"></local:ImagePage>
     
     <ContentPage Title="Контакты">
-        <StackLayout Margin="50,0,50,0">
-            <Frame Margin="0,50,0,0"  BackgroundColor="#DCDCDC">
-                <Entry x:Name="Phonetxt" Placeholder="Телефон №1" IsEnabled="False" TextColor="Black" Margin="-10,-15,-10,-15" Keyboard="Telephone"/>
-            </Frame>
-            <Frame Margin="0,50,0,0" BackgroundColor="#DCDCDC">
-                <Entry x:Name="Phonetxt2" Placeholder="Телефон №2" IsEnabled="False" TextColor="Black" Margin="-10,-15,-10,-15" Keyboard="Telephone"/>
-            </Frame>
-            <Frame Margin="0,50,0,0"  BackgroundColor="#DCDCDC">
-                <Entry x:Name="Emailtxt2" Placeholder="E-mail" IsEnabled="False" TextColor="Black"  Margin="-10,-15,-10,-15" Keyboard="Email"/>
-            </Frame>
-            <Frame Margin="0,50,0,0"  BackgroundColor="#DCDCDC">
-                <Entry x:Name="Adresstxt" Placeholder="Адрес" IsEnabled="False" TextColor="Black" Margin="-10,-15,-10,-15" Keyboard="Chat"/>
-            </Frame>
+        <StackLayout Margin="50,20,50,0">
+            <Entry BackgroundColor="#DCDCDC" x:Name="Phonetxt" Placeholder="Телефон №1" IsEnabled="False" TextColor="Black" Margin="0,20,0,0" Keyboard="Telephone"/>
+            <Entry BackgroundColor="#DCDCDC" x:Name="Emailtxt2" Placeholder="E-mail" IsEnabled="False" TextColor="Black"  Margin="0,20,0,0" Keyboard="Email"/>
+            <Entry BackgroundColor="#DCDCDC" x:Name="Adresstxt" Placeholder="Адрес" IsEnabled="False" TextColor="Black" Margin="0,20,0,0" Keyboard="Chat"/>
         </StackLayout>
     </ContentPage>
 </TabbedPage>
