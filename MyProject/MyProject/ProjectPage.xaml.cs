@@ -14,10 +14,10 @@ namespace MyProject
     
     public partial class ProjectPage : ContentPage
     {
-        
         public ProjectPage()
         {
             InitializeComponent();
+
         }
 
         private void project_List(object sender, ItemTappedEventArgs e)
@@ -27,8 +27,9 @@ namespace MyProject
 
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new AddProjectPage());
-            await App.GlobalNavigation.PushAsync(new AddProjectPage(), true);
+            await Navigation.PushAsync(new AddProjectPage());
+            //await App.GlobalNavigation.PushAsync(new AddProjectPage(), true);
+
         }
     }
 }

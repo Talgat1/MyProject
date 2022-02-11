@@ -8,9 +8,9 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label FontSize="Title" HorizontalOptions="CenterAndExpand"  Text="Проекты" TextColor="White"/>
-            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe145;" FontSize="Title">
+            <Label Padding="0,5,10,0" HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe145;"  FontSize="Title">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
@@ -44,7 +44,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="projectList" ItemTapped="project_List" ItemsSource="{StaticResource Key=projects}" />
+            <ListView x:Name="projectList"  ItemTapped="project_List" ItemsSource="{StaticResource Key=projects}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

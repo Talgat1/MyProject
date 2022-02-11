@@ -8,8 +8,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Проект" TextColor="White"/>
-
-            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe87e;" FontSize="Title">
+            <Label HorizontalOptions="End" FontFamily="MaterialIconsFont" TextColor="White" Text="&#xe150;" Padding="0,5,10,0" FontSize="Title">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Edit"/>
                 </Label.GestureRecognizers>

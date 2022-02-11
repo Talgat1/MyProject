@@ -19,7 +19,12 @@ namespace MyProject
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "Tapped", "OK");
+            DisplayAlert("Удаление", "Вы точно хотите удалить проект?", "OK", "Отмена");
+        }
+
+        private void Edit_Tapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Изменение", "Вы точно хотите изменить проект?", "OK", "Отмена");
         }
     }
 }

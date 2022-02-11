@@ -15,6 +15,7 @@ namespace MyProject
     {
         public InformationProjectPage()
         {
+
             InitializeComponent();
         }
 
