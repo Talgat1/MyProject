@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-
+using MyProject.db;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,13 +17,26 @@ namespace MyProject
         public ProjectPage()
         {
             InitializeComponent();
+            UpdateList();
 
         }
-
-        private void project_List(object sender, ItemTappedEventArgs e)
+        private async void project_List_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Navigation.PushAsync(new InformationProjectPage());
+            await Navigation.PushAsync(new InformationProjectPage((ProjectModel)e.Item));
         }
+
+        protected override void OnAppearing()
+        {
+            UpdateList();
+            base.OnAppearing();
+        }
+
+        public void UpdateList()
+        {
+            ProjectsLstview.ItemsSource = null;
+            ProjectsLstview.ItemsSource = App.Db.GetProjects();
+        }
+        
 
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

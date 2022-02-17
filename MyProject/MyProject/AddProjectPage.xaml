@@ -3,28 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyProject.AddProjectPage"
              Visual="Material">
-    
-    <NavigationPage.TitleView>
-        <Label FontSize="Title" Margin="0,0,50,0" HorizontalOptions="Center"  Text="Создать проект" TextColor="White"/>
-    </NavigationPage.TitleView>
-    
-    <ContentPage.Content>
-        <StackLayout Margin="50,0,50,0">
-            <StackLayout>
-                <Entry BackgroundColor="#DCDCDC" Margin="0,20,0,0" x:Name="LoginTxt"  Placeholder="Имя проекта" TextColor="Black"/>
-                <Frame Margin="0,20,0,0" Padding="0,0,0,0"  BackgroundColor="#DCDCDC">
-                    <Editor  BackgroundColor="#DCDCDC" HeightRequest="200" x:Name="Opis"  Placeholder="Описание" TextColor="Black"/>
-                </Frame>
-                
-                <Entry BackgroundColor="#DCDCDC" x:Name="Phone" Margin="0,20,0,0" Placeholder="Телефон №1" TextColor="Black"  IsPassword="True"/>
-                <Entry BackgroundColor="#DCDCDC" x:Name="Email" Margin="0,20,0,0" Placeholder="E-mail" TextColor="Black" IsPassword="True"/>
-                <Entry BackgroundColor="#DCDCDC" x:Name="Adres" Margin="0,20,0,0" Placeholder="Адрес" TextColor="Black" IsPassword="True"/>
-            </StackLayout>
 
-            <StackLayout Margin="0,60,0,0">
-                <Button Margin="0,0,0,0" x:Name="Otm" HorizontalOptions="Start" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="  Отмена  "/>
-                <Button Margin="0,-40,10,0" x:Name="Add"  HorizontalOptions="End" BackgroundColor="#00B2FF" CornerRadius="200" TextColor="White" FontSize="12" Text="Добавить"/>
-            </StackLayout>
+    <NavigationPage.TitleView>
+        <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
+            <Label
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                Text="Создать проект"
+                TextColor="White"
+                TextTransform="None"
+                VerticalOptions="CenterAndExpand"/>
         </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20,10" Spacing="30">
+                <Entry
+                x:Name="ProjectNameTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Имя проекта" />
+                <Editor
+                x:Name="ProjectDescriptionTxt"
+                AutoSize="TextChanges"
+                BackgroundColor="LightGray"
+                Placeholder="Описание" />
+                <Entry
+                x:Name="TelNumber1Txt"
+                BackgroundColor="LightGray"
+                Placeholder="Номер телефона №1" />
+                <Entry
+                x:Name="EmailTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Email" />
+                <Entry
+                x:Name="AddressTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Адрес" />
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="img" Margin="20, 0, 0, 0" HeightRequest="150" WidthRequest="150"/>
+                    <StackLayout>
+                        <Button x:Name="add_cam" Text="Камера" FontSize="9" BackgroundColor="#00B2FF" Margin="20, 20" CornerRadius="200" Clicked="TakePhotoAsync"/>
+                        <Button x:Name="add_gal" Text="Галерея"  FontSize="9" Margin="20, 0" BackgroundColor="#00B2FF" CornerRadius="200" Clicked="GetPhotoAsync"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                    x:Name="CancelBtn"
+                    BackgroundColor="DeepSkyBlue"
+                    Clicked="CancelBtn_Clicked"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Start"
+                    Text="Отмена"
+                    WidthRequest="150" />
+                    <Button
+                    x:Name="AddBtn"
+                    BackgroundColor="DeepSkyBlue"
+                    Clicked="AddBtn_Clicked"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Добавить"
+                    WidthRequest="150" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
