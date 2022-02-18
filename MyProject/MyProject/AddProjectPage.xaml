@@ -6,65 +6,27 @@
 
     <NavigationPage.TitleView>
         <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
-            <Label
-                FontSize="21"
-                HorizontalOptions="CenterAndExpand"
-                Text="Создать проект"
-                TextColor="White"
-                TextTransform="None"
-                VerticalOptions="CenterAndExpand"/>
+            <Label FontSize="21" HorizontalOptions="CenterAndExpand" Text="Создать проект" TextColor="White" TextTransform="None" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="20,10" Spacing="30">
-                <Entry
-                x:Name="ProjectNameTxt"
-                BackgroundColor="LightGray"
-                Placeholder="Имя проекта" />
-                <Editor
-                x:Name="ProjectDescriptionTxt"
-                AutoSize="TextChanges"
-                BackgroundColor="LightGray"
-                Placeholder="Описание" />
-                <Entry
-                x:Name="TelNumber1Txt"
-                BackgroundColor="LightGray"
-                Placeholder="Номер телефона №1" />
-                <Entry
-                x:Name="EmailTxt"
-                BackgroundColor="LightGray"
-                Placeholder="Email" />
-                <Entry
-                x:Name="AddressTxt"
-                BackgroundColor="LightGray"
-                Placeholder="Адрес" />
-                <StackLayout Orientation="Horizontal">
-                    <Image x:Name="img" Margin="20, 0, 0, 0" HeightRequest="150" WidthRequest="150"/>
+                <Entry x:Name="ProjectNameTxt" BackgroundColor="#DCDCDC" Placeholder="Имя проекта" />
+                <Editor x:Name="ProjectDescriptionTxt" AutoSize="TextChanges" BackgroundColor="#DCDCDC" Placeholder="Описание" />
+                <Entry x:Name="TelNumber1Txt" BackgroundColor="#DCDCDC" Placeholder="Номер телефона №1" />
+                <Entry x:Name="EmailTxt" BackgroundColor="#DCDCDC" Placeholder="Email" />
+                <Entry x:Name="AddressTxt" BackgroundColor="#DCDCDC" Placeholder="Адрес" />
+                <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+                    <Image x:Name="img"  HeightRequest="150" WidthRequest="150"/>
                     <StackLayout>
                         <Button x:Name="add_cam" Text="Камера" FontSize="9" BackgroundColor="#00B2FF" Margin="20, 20" CornerRadius="200" Clicked="TakePhotoAsync"/>
                         <Button x:Name="add_gal" Text="Галерея"  FontSize="9" Margin="20, 0" BackgroundColor="#00B2FF" CornerRadius="200" Clicked="GetPhotoAsync"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button
-                    x:Name="CancelBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="CancelBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="Start"
-                    Text="Отмена"
-                    WidthRequest="150" />
-                    <Button
-                    x:Name="AddBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="AddBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="EndAndExpand"
-                    Text="Добавить"
-                    WidthRequest="150" />
+                    <Button x:Name="CancelBtn" BackgroundColor="#00B2FF" Clicked="CancelBtn_Clicked" CornerRadius="20" HeightRequest="50" HorizontalOptions="Start" Text="Отмена" WidthRequest="150" />
+                    <Button x:Name="AddBtn" BackgroundColor="#00B2FF" Clicked="AddBtn_Clicked" CornerRadius="20" HeightRequest="50" HorizontalOptions="EndAndExpand" Text="Добавить" WidthRequest="150" />
                 </StackLayout>
 
             </StackLayout>
