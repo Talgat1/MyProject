@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MyProject.Models;
+using MyProject.MVVMmodel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyProject
+namespace MyProject.MvvmView.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    
-    public partial class InformationProjectPage : TabbedPage
+    public partial class Page1 : ContentPage
     {
-        public InformationProjectPage()
+        public Page1(Project project)
         {
-
             InitializeComponent();
-        }
 
-        private async void Edit(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new EditProjectPage());
         }
     }
 }

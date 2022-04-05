@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using System;
+using MyProject.Models;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,27 +8,32 @@ namespace MyProject.db
 {
     public class CRUDOperation
     {
-        SQLiteConnection db;
+        readonly SQLiteConnection db;
         public CRUDOperation(string databasePath)
-        { 
-            db = new SQLiteConnection(databasePath); 
-            db.CreateTable<ProjectModel>();
-        }
-        public IEnumerable<ProjectModel> GetProjects()
         {
-            return db.Table<ProjectModel>();
+            db = new SQLiteConnection(databasePath);
+            db.CreateTable<Project>();
+            db.CreateTable<Client>();
+        }
+        public IEnumerable<Project> GetProjects()
+        {
+            return db.Table<Project>();
+        }
+        public IEnumerable<Client> GetClients()
+        {
+            return db.Table<Client>();
         }
 
-        public ProjectModel GetProjectItem(int id)
+        public Project GetProjectItem(int id)
         {
-            return db.Get<ProjectModel>(id);
+            return db.Get<Project>(id);
         }
 
-        public int DelProj(int id) { return db.Delete<ProjectModel>(id); }
+        public int DelProj(int id) { return db.Delete<Project>(id); }
 
-        public int SaveItem(ProjectModel projectModel)
+        public int SaveItem(Project projectModel)
         {
-            if (projectModel.Id != 0 )
+            if (projectModel.Id != 0)
             {
                 db.Update(projectModel);
                 return projectModel.Id;
@@ -36,7 +42,11 @@ namespace MyProject.db
             {
                 return db.Insert(projectModel);
             }
-        } 
+        }
 
+        public int SaveClient(Client projectModel)
+        {
+            return db.Insert(projectModel);
+        }
     }
 }
