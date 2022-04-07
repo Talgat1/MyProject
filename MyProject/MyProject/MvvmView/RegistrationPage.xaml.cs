@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MyProject.MVVMmodel;  
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,7 @@ namespace MyProject
         public RegistrationPage()
         {
             InitializeComponent();
+            BindingContext = new RegistrationViewModel { Navigation = this.Navigation };
         }
     }
 }
